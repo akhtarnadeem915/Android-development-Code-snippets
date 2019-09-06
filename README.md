@@ -1,2 +1,2 @@
-# android-development - Code snippets
+# Android-development - Code snippets
 Chips | ChipGroups
