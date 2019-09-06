@@ -1,0 +1,95 @@
+#Xml code
+<com.google.android.material.chip.ChipGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip1"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Disciplinary"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip2"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Issue/Return"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip3"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reference"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip4"
+                style="@style/Widget.MaterialComponents.Chip.Action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Baggage"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"/>
+
+</com.google.android.material.chip.ChipGroup>
+    
+    
+#Java code 
+
+Chip chipone = v.findViewById(R.id.chip1);
+        discipline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.rules_container, new one())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+        Chip chiptwo = v.findViewById(R.id.chip2);
+        issue.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.rules_container, new two())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+
+       Chip chipthree = v.findViewById(R.id.chip3);
+        reference.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.rules_container, new three())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+        Chip chipfour = v.findViewById(R.id.chip4);
+        baggage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.rules_container, new four())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
