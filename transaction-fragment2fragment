@@ -1,0 +1,14 @@
+//Fragment to fragment transaction on button click
+//<container_name> is nothing but the id of the very xml layout
+
+ImageButton imgbtn = v.findViewById(R.id.imgbt);
+        imgbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.<container_name>, new one())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
