@@ -1,6 +1,6 @@
 # Android-development - Code snippets
-Chips | ChipGroups   
-WebView   
-Fragments transaction
-1) Activity to Fragment   
-2) Fragment to Fragment
+1) Chips | ChipGroups   
+2) WebView   
+3) Fragments transaction
+a) Activity to Fragment   
+b) Fragment to Fragment
