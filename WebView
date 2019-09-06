@@ -1,0 +1,36 @@
+#WebView in Fragment
+//here we pass the url of the website that we want to display in our app
+//i have added error handling of status code 404 and no internet, 
+//when fragment is launched without network access it shows a blank screen
+
+#Java code
+public class <class_name> extends Fragment {
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        View v =  inflater.inflate(R.layout.fragment_layout, container, false);
+        String url  = "https://........";
+
+
+        WebView webview = v.findViewById(R.id.web);
+        webview.getSettings().setJavaScriptEnabled(true);
+        webview.setWebViewClient(new WebViewClient() {
+            @Override
+            public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                super.onReceivedError(view, errorCode, description, failingUrl);
+                view.loadUrl("about:blank");
+                Snackbar
+                        .make(view, "No network connection.",Snackbar.LENGTH_SHORT)
+                        .show();
+
+            }
+        });
+        webview.loadUrl(url);
+
+        return v;
+    }
+
+}
+
