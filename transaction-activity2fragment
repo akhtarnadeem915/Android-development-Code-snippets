@@ -1,0 +1,61 @@
+//activity to fragment (on button click)
+//note:- i have placed an fragment inside the ActivityMain.java too, 
+//and this code swaps the fragment of main class to five other fragments on button click also it is stacked, 
+//means it supports back button.
+
+public void ChangeFragment(View view) {
+        Fragment fragment;
+
+        if (view == findViewById(R.id.btn1))
+        {
+            fragment = new one();
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.fragment_home, fragment);
+            ft.addToBackStack(null);
+            ft.commit();
+
+        }
+
+        if (view == findViewById(R.id.btn2))
+        {
+            fragment = new two();
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.fragment_home, fragment);
+            ft.addToBackStack(null);
+            ft.commit();
+        }
+
+        if (view == findViewById(R.id.btn3))
+        {
+            fragment = new three();
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.fragment_home, fragment);
+            ft.addToBackStack(null);
+            ft.commit();
+        }
+
+        if (view == findViewById(R.id.btn4))
+        {
+            fragment = new four();
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.fragment_home, fragment);
+            ft.addToBackStack(null);
+            ft.commit();
+        }
+
+        if (view == findViewById(R.id.btn5))
+        {
+            fragment = new five();
+            FragmentManager fm = getSupportFragmentManager();
+            FragmentTransaction ft = fm.beginTransaction();
+            ft.replace(R.id.fragment_home, fragment);
+            ft.addToBackStack(null);
+            ft.commit();
+        }
+    }
+
+
